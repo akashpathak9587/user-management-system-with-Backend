@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title User Signup | Registration and Login System
+        link(rel="stylesheet", href="../css/registration.css")
+        link(rel="stylesheet", href="../css/font-awesome.css")
+    body 
+        .main-form
+            header 
+                .main-header
+                    h1 Registration and Logind System
+                .sub-header 
+                    h1 Create Account
+            .Regform
+                form(action="#", method="post") 
+                    input#name(type="text", name="first_name" placeholder="First Name")
+                    input#name(type="text", name="last_name" placeholder="Last Name")
+                    input#email(type="email", name="email" placeholder="Email Address")
+                    input#number(type="text", name="mobNumber" placeholder="Contact Number")
+                    input#password(type="password", name="pass" placeholder="password")
+                    input#password(type="password", name="confPass" placeholder="Confirm Password")
+                    input#submit(type="submit", value="Create Account")
+            .formFooter 
+                a(href="login.html") Have an account? Go to Login
+                a(href="index.html") Back to Home
+        footer 
+            p copyright &#169; 2022
+            a(href="#") Akash Pathak

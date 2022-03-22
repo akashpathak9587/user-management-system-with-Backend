@@ -1,0 +1,89 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Between Dates report date selection | Registration and Login System
+        link(rel="stylesheet", href="../../css/font-awesome.css")
+        link(rel="stylesheet", href="../../css/user-profile-edit.css")
+        script(src="../../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1
+                    a(href="dashboard.html") Admin Panel
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .search-box 
+                input#search(type="text", name="search" placeholder="Search User by Name, email and Contact Number")
+                button(type="submit")
+                    i.fa-solid.fa-magnifying-glass
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="dashboard.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="manage-users.html") 
+                                i.fa-solid.fa-users
+                                p Manage Users
+                        li.sidebar-link-list-item
+                            a(href="#") 
+                                i.fa-solid.fa-calendar
+                                p B/w Dates Report
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 
+                        span Anuj 
+                        |'s Profile
+                .main-container 
+                    .main-container-form 
+                        form(action="manage-users.html", method="get") 
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="fName") First Name
+                                .main-container-form-box-input 
+                                    input#fName(type="text", name="fName" value="Anuj")
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="lName") Last Name
+                                .main-container-form-box-input 
+                                    input#lName(type="text", name="lName" value="Kumar")
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="mNumber") Contact No.
+                                .main-container-form-box-input 
+                                    input#mNumber(type="text", maxlength="10" name="mNumber" value="1234567890") 
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    p Email
+                                .main-container-form-box-value 
+                                    p phpgurukulteam@gmail.com
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    p Reg. Date	
+                                .main-container-form-box-value 
+                                    p 2021-08-10 00:00:00
+                            .main-container-form-submit 
+                                input(type="submit", value="update")
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="#") Change Password 
+            a(href="index.html") Logout

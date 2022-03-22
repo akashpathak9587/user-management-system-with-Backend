@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Between Dates report date selection | Registration and Login System
+        link(rel="stylesheet", href="../../css/font-awesome.css")
+        link(rel="stylesheet", href="../../css/bwdates-report-ds.css")
+        script(src="../../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1
+                    a(href="dashboard.html") Admin Panel
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .search-box 
+                form(action="searchResult.html") 
+                    input#search(type="text", name="search" placeholder="Search User by Name, email and Contact Number")
+                    button(type="submit")
+                        i.fa-solid.fa-magnifying-glass
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="dashboard.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="manage-users.html") 
+                                i.fa-solid.fa-users
+                                p Manage Users
+                        li.sidebar-link-list-item
+                            a(href="#") 
+                                i.fa-solid.fa-calendar
+                                p B/w Dates Report
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 B/w Dates Report Date Selection
+                .main-container 
+                    .main-container-form 
+                        form(action="#", method="get") 
+                            .main-container-form-from 
+                                .main-container-form-from-label
+                                    label(for="FromDate") From Date
+                                .main-container-form-from-input 
+                                    input#FromDate(type="date", name="FromDate") 
+                            .main-container-form-to 
+                                .main-container-form-to-label 
+                                    label(for="ToDate") To Date 
+                                .main-container-form-to-input 
+                                    input#ToDate(type="date", name="ToDate")
+                            .main-container-form-submit 
+                                input(type="submit", value="submit")
+
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="#") Change Password 
+            a(href="index.html") Logout

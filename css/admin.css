@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+body {
+  background-color: #1d40cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+body .main-form {
+  background-color: #ffffff;
+  width: 500px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+body .main-form .form-header .main-heading {
+  padding-bottom: 20px;
+}
+
+body .main-form .form-header .main-heading h1 {
+  font-weight: 600;
+}
+
+body .main-form .form-header .sub-heading {
+  padding: 10px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+body .main-form .form-header .sub-heading h1 {
+  font-weight: 500;
+}
+
+body .main-form .logForm {
+  padding: 20px;
+}
+
+body .main-form .logForm form input:not(input[type=submit]) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+body .main-form .logForm form input[type=submit] {
+  margin-left: 250px;
+  padding: 10px;
+  background-color: #1d40cd;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+body .main-form .formFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main-form .formFooter a:nth-child(2) {
+  margin-top: 10px;
+}
+
+body footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+/*# sourceMappingURL=admin.css.map */

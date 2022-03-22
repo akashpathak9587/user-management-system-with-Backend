@@ -1,0 +1,77 @@
+@import 'config.scss';
+body {
+    background-color: #1d40cd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .main-form {
+        background-color: #fff;
+        width: 700px;
+        padding: 10px 0;
+    }
+    header {
+        text-align: center;
+        .main-header {
+            padding: 10px 0;
+            h1 {
+                font-weight: 600;
+            }
+        }
+        .sub-header {
+            padding: 20px 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            h1 {
+                font-weight: 500;
+            }
+        }
+    }
+    .Regform {
+        form {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            input {
+                padding: 20px 10px;
+                margin: 10px;
+                border-radius: 5px;
+                border: 1px solid #000;
+                outline: none;
+                &[type=email] {
+                    grid-column-start: span 2;
+                }
+                &#number {
+                    grid-column-start: span 2;
+                }
+                &[type=submit] {
+                    grid-column-start: span 2;
+                    background-color: #1982d2;
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .formFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: #1982d2;
+        }
+    }
+    footer {
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}

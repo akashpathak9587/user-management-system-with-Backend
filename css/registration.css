@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+body {
+  background-color: #1d40cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .main-form {
+  background-color: #fff;
+  width: 700px;
+  padding: 10px 0;
+}
+
+body header {
+  text-align: center;
+}
+
+body header .main-header {
+  padding: 10px 0;
+}
+
+body header .main-header h1 {
+  font-weight: 600;
+}
+
+body header .sub-header {
+  padding: 20px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+body header .sub-header h1 {
+  font-weight: 500;
+}
+
+body .Regform form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+body .Regform form input {
+  padding: 20px 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: none;
+}
+
+body .Regform form input[type=email] {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+body .Regform form input#number {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+body .Regform form input[type=submit] {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+  background-color: #1982d2;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+body .formFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .formFooter a {
+  color: #1982d2;
+}
+
+body footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+/*# sourceMappingURL=registration.css.map */

@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Admin Dashboard | Registration and Login System
+        link(rel="stylesheet", href="../css/font-awesome.css")
+        link(rel="stylesheet", href="../css/welcome.css")
+        script(src="../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1 
+                    a(href="welcome.html") User Panel 
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="welcome.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="profile.html") 
+                                i.fas.fa-user
+                                p Profile
+                        li.sidebar-link-list-item
+                            a(href="change-password.html") 
+                                i.fas.fa-key
+                                p Change Password
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 Dashboard
+                .sub-title
+                    h1 Dashboard 
+                .main-navigation 
+                    .main-navigation-box 
+                        .main-navigation-box-text 
+                            p 
+                                | Welcome Back 
+                                span AnujKumar
+                        .main-navigation-box-link 
+                            a(href="profile.html") View Profile
+                                i.fa-solid.fa-angle-right
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="change-password.html") Settings
+            a(href="change-password.html") Activity Log 
+            a(href="index.html") Logout

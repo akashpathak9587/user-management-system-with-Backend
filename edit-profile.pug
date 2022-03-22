@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Profile | Registration and Login System
+        link(rel="stylesheet", href="../css/font-awesome.css")
+        link(rel="stylesheet", href="../css/edit-profile.css")
+        script(src="../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1 
+                    a(href="welcome.html") User Panel 
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="welcome.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="profile.html") 
+                                i.fas.fa-user
+                                p Profile
+                        li.sidebar-link-list-item
+                            a(href="change-password.html") 
+                                i.fas.fa-key
+                                p Change Password
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 
+                        span Anuj 
+                        |'s Profile
+                .main-container 
+                    .main-container-form 
+                        form(action="profile.html", method="get") 
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="fName") First Name
+                                .main-container-form-box-input 
+                                    input#fName(type="text", name="fName" value="Anuj")
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="lName") Last Name
+                                .main-container-form-box-input 
+                                    input#lName(type="text", name="lName" value="Kumar")
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    label(for="mNumber") Contact No.
+                                .main-container-form-box-input 
+                                    input#mNumber(type="text", maxlength="10" name="mNumber" value="1234567890") 
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    p Email
+                                .main-container-form-box-value 
+                                    p phpgurukulteam@gmail.com
+                            .main-container-form-box 
+                                .main-container-form-box-label
+                                    p Reg. Date	
+                                .main-container-form-box-value 
+                                    p 2021-08-10 00:00:00
+                            .main-container-form-submit 
+                                input(type="submit", value="update")
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="#") Settings
+            a(href="#") Activity Log 
+            a(href="index.html") Logout

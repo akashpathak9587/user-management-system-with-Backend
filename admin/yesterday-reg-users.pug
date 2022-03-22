@@ -1,0 +1,112 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Yesterday Registered Users | Registration and Login System
+        link(rel="stylesheet", href="../../css/font-awesome.css")
+        link(rel="stylesheet", href="../../css/manage-users.css")
+        script(src="../../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1
+                    a(href="dashboard.html") Admin Panel 
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .search-box 
+                form(action="searchResult.html") 
+                    input#search(type="text", name="search" placeholder="Search User by Name, email and Contact Number")
+                    button(type="submit")
+                        i.fa-solid.fa-magnifying-glass
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="dashboard.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="manage-users.html") 
+                                i.fa-solid.fa-users
+                                p Manage Users
+                        li.sidebar-link-list-item
+                            a(href="bwdates-report-ds.html") 
+                                i.fa-solid.fa-calendar
+                                p B/w Dates Report
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 Yesterday Registered Users
+                .sub-title
+                    h1
+                        a(href="dashboard.html") Dashboard 
+                        | / Yesterday Registered Users
+                .table-container 
+                    .table-container-title 
+                        h1 
+                            i.fas.fa-table 
+                            | Yesterday Registered Users Details
+                    .table-container-form 
+                        .table-container-form-select 
+                            select#entries
+                                option(value="5") 5
+                                option(value="10") 10
+                                option(value="15") 15
+                                option(value="20") 20
+                                option(value="25") 25
+                            i#selectIcon.fas.fa-angle-down
+                            label(for="entries") entries per page
+                        .table-container-form-search 
+                            input#search(type="text", name="search" placeholder="Search...")
+                    .table-container-data 
+                        table 
+                            thead 
+                                tr
+                                    th 
+                                        a(href="#")  Sno.
+                                    th 
+                                        a(href="#") First Name 
+                                    th 
+                                        a(href="#") Last Name
+                                    th 
+                                        a(href="#") Email Id 
+                                    th 
+                                        a(href="#") Contact No.
+                                    th 
+                                        a(href="#") Reg. Date
+                                    th
+                                        a(href="#") Action 
+                            tbody 
+                                tr 
+                                    td 1
+                                    td akash 
+                                    td pathak 
+                                    td aakapa95@gmail.com
+                                    td 3423432947	
+                                    td 2022-03-21 16:03:52
+                                    td 
+                                        a(href="user-profile.html") 
+                                            i.fas.fa-edit
+                                        a(href="#") 
+                                            i.fas.fa-trash
+                    .table-container-footer 
+                        p Showing 1 to 1 of 1 entries
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="#") Change Password 
+            a(href="index.html") Logout

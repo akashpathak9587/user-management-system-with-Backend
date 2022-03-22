@@ -1,0 +1,66 @@
+// index page styling
+@import 'config.scss';
+nav {
+    background-color: #000;
+    padding: 20px 10px;
+    h3 {
+        a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+}
+
+main {
+    .header {
+        margin: 20px 10px;
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+    >a {
+        margin: 20px 10px;
+        font-size: 20px;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+        >* {
+            margin: 10px;
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            border: none;
+            border-radius: 5px;
+            &:nth-child(1) {
+                background: rgb(18, 135, 225);
+            }
+            &:nth-child(2) {
+                background: rgb(232, 151, 12);
+            }
+            &:nth-child(3) {
+                background: rgb(182, 12, 12);
+            }
+        }
+        a {
+            color: #fff;
+            width: 100%;
+            &:nth-child(1) {
+                text-decoration: none;
+                padding-left: 10px;
+            }
+        }
+        [class*="-button"] {
+            border-top: 1px solid #000;
+            width: 100%;
+            padding-left: 10px;
+        }
+    }
+}

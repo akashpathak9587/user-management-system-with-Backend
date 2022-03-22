@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title User Login | Registration and Login System
+        link(rel="stylesheet", href="../../css/admin.css")
+        link(rel="stylesheet", href="../../css/font-awesome.css")
+    body 
+        .main-form 
+            .form-header 
+                .main-heading 
+                    h1 Registration and Login System
+                .sub-heading 
+                    h1 Admin Login 
+            .logForm 
+                form(action="dashboard.html", method="post") 
+                    input#email(type="email", name="email" placeholder="Username")
+                    input#pass(type="password", name="pass" placeholder="password")
+                    a(href="#") Forgot Password?
+                    input(type="submit", value="Login")
+            .formFooter
+                a(href="../index.html" style="color: #11b8de") Back to Home
+        footer 
+            p copyright &#169; 2022
+            a(href="#") Akash Pathak

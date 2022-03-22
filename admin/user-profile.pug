@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Between Dates report date selection | Registration and Login System
+        link(rel="stylesheet", href="../../css/font-awesome.css")
+        link(rel="stylesheet", href="../../css/user-profile.css")
+        script(src="../../js/script.js" defer) 
+    body 
+        nav 
+            .logo 
+                h1
+                    a(href="dashboard.html") Admin Panel
+            .nav-button#navButton
+                button 
+                    i.fas.fa-bars
+            .search-box 
+                input#search(type="text", name="search" placeholder="Search User by Name, email and Contact Number")
+                button(type="submit")
+                    i.fa-solid.fa-magnifying-glass
+            .profile-button#profileButton
+                a(href="#") 
+                    i.fa-solid.fa-user
+                    i.fa-solid.fa-caret-down
+        main#mainPage
+            .sidebar#sidebar 
+                .title 
+                    h1 CORE 
+                .sidebar-link
+                    ul.sidebar-link-list
+                        li.sidebar-link-list-item
+                            a(href="dashboard.html") 
+                                i.fa-solid.fa-gauge-high
+                                p Dashboard
+                        li.sidebar-link-list-item
+                            a(href="manage-users.html") 
+                                i.fa-solid.fa-users
+                                p Manage Users
+                        li.sidebar-link-list-item
+                            a(href="#") 
+                                i.fa-solid.fa-calendar
+                                p B/w Dates Report
+                        li.sidebar-link-list-item
+                            a(href="index.html") 
+                                i.fa-solid.fa-right-from-bracket
+                                p Signout
+            section.main
+                .main-title
+                    h1 
+                        span Anuj 
+                        |'s Profile
+                .main-container 
+                    .main-container-link 
+                        a(href="user-profile-edit.html") edit
+                    .main-container-table 
+                        .main-container-table-box 
+                                .main-container-table-box-label
+                                    p First Name
+                                .main-container-table-box-value 
+                                    p Anuj
+                        .main-container-table-box 
+                                .main-container-table-box-label
+                                    p Last Name
+                                .main-container-table-box-value 
+                                    p Kumar
+                        .main-container-table-box 
+                                .main-container-table-box-label
+                                    p Contact No.
+                                .main-container-table-box-value 
+                                    p 1234567890
+                        .main-container-table-box 
+                                .main-container-table-box-label
+                                    p Email
+                                .main-container-table-box-value 
+                                    p phpgurukulteam@gmail.com
+                        .main-container-table-box 
+                            .main-container-table-box-label
+                                p Reg. Date	
+                            .main-container-table-box-value 
+                                p 2021-08-10 00:00:00
+                footer 
+                    p copyright &#169; 2022
+                    a(href="#") Akash Pathak
+        .profile-box 
+            a(href="#") Change Password 
+            a(href="index.html") Logout

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+nav {
+  background-color: #000;
+  padding: 20px 10px;
+}
+
+nav h3 a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+main .header {
+  margin: 20px 10px;
+}
+
+main .header h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+main > a {
+  margin: 20px 10px;
+  font-size: 20px;
+}
+
+main .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .navigation > * {
+  margin: 10px;
+  border: 1px solid black;
+  width: 500px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: none;
+  border-radius: 5px;
+}
+
+main .navigation > *:nth-child(1) {
+  background: #1287e1;
+}
+
+main .navigation > *:nth-child(2) {
+  background: #e8970c;
+}
+
+main .navigation > *:nth-child(3) {
+  background: #b60c0c;
+}
+
+main .navigation a {
+  color: #fff;
+  width: 100%;
+}
+
+main .navigation a:nth-child(1) {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+main .navigation [class*="-button"] {
+  border-top: 1px solid #000;
+  width: 100%;
+  padding-left: 10px;
+}
+/*# sourceMappingURL=main.css.map */

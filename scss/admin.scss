@@ -1,0 +1,71 @@
+@import 'config';
+body {
+    background-color: #1d40cd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    .main-form {
+        background-color: #ffffff;
+        width: 500px;
+        padding: 10px 0;
+        border-radius: 5px;
+        .form-header {
+            .main-heading {
+                padding-bottom: 20px;
+                h1 {
+                    font-weight: 600;
+                }
+            }
+            .sub-heading {
+                padding: 10px 0;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                h1 {
+                    font-weight: 500;
+                }
+            }
+        }
+        .logForm {
+            padding: 20px;
+            form {
+                input:not(input[type=submit]) {
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+                input[type=submit] {
+                    margin-left: 250px;
+                    padding: 10px;
+                    background-color: #1d40cd;
+                    color: #fff;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .formFooter {
+            display: flex;
+            flex-direction: column;
+            a {
+                &:nth-child(2) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
