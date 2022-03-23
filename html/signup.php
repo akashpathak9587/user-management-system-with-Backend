@@ -1,3 +1,38 @@
+<?php
+$pMatch = true;
+$exist = false;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include_once 'config.php';
+
+    $fName = $_POST["first_name"];
+    $lName = $_POST['last_name'];
+    $email = $_POST['email'];
+    $MobNo = $_POST['mobNumber'];
+    $cPass = $_POST['confPass'];
+    $pass = $_POST['pass'];
+
+    $sql = "select * from users where email='$email'";
+    $result = mysqli_query($conn, $sql);
+    $num  = mysqli_num_rows($result);
+    if ($num == 0) {
+        if ($pass == $cPass) {
+            $hash = password_hash($pass, PASSWORD_DEFAULT);
+            $sql = "insert into users (first_name, last_name, password, email, contact_no, date) values('$fName', '$lName', '$hash', '$email', '$MobNo', current_timestamp)";
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                echo "<script>alert('Registration successfully done, now you can login');</script>";
+            } else {
+                echo mysqli_error($conn);
+            }
+        } else {
+            $pMatch = false;
+        }
+    } else {
+        echo "<script>alert('Email Already registered with us')</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +56,22 @@
             </div>
         </header>
         <div class="Regform">
-            <form action="#" method="post">
-                <input id="name" type="text" name="first_name" placeholder="First Name">
+            <form action="signup.php" method="post">
+                <input id="name" type="text" name="first_name" required placeholder="First Name">
                 <input id="name" type="text" name="last_name" placeholder="Last Name">
-                <input id="email" type="email" name="email" placeholder="Email Address">
-                <input id="number" type="text" name="mobNumber" placeholder="Contact Number">
-                <input id="password" type="password" name="pass" placeholder="password">
-                <input id="password" type="password" name="confPass" placeholder="Confirm Password">
+                <input id="email" type="email" name="email" required placeholder="Email Address">
+                <input id="number" type="text" name="mobNumber" required maxlength="10" placeholder="Contact Number">
+                <input id="password" type="password" name="pass" required placeholder="password">
+                <input id="password" type="password" name="confPass" required placeholder="Confirm Password">
+                <?php
+                if (!$pMatch) {
+                    echo "<p style='padding: 10px; text-align: left;'>password not match</p>";
+                }
+                ?>
                 <input id="submit" type="submit" value="Create Account">
             </form>
         </div>
-        <div class="formFooter"> <a href="login.html">Have an account? Go to Login</a><a href="index.html">Back to Home</a></div>
+        <div class="formFooter"> <a href="login.php">Have an account? Go to Login</a><a href="index.php">Back to Home</a></div>
     </div>
     <footer>
         <p>copyright &#169; 2022</p><a href="#">Akash Pathak</a>
