@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 echo "<script>alert('Registration successfully done, now you can login');</script>";
+                echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
             } else {
                 echo mysqli_error($conn);
             }

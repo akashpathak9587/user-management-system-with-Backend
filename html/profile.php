@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['firstName'])) {
+    echo "<script type=text/javascript>document.location = 'index.php'</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +21,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h1> <a href="welcome.html">User Panel </a></h1>
+            <h1> <a href="welcome.php">User Panel </a></h1>
         </div>
         <div class="nav-button" id="navButton">
             <button> <i class="fas fa-bars"></i></button>
@@ -32,22 +38,22 @@
             <div class="sidebar-link">
                 <ul class="sidebar-link-list">
                     <li class="sidebar-link-list-item">
-                        <a href="welcome.html"> <i class="fa-solid fa-gauge-high"></i>
+                        <a href="welcome.php"> <i class="fa-solid fa-gauge-high"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="profile.html"> <i class="fas fa-user"></i>
+                        <a href="profile.php"> <i class="fas fa-user"></i>
                             <p>Profile</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="change-password.html"> <i class="fas fa-key"></i>
+                        <a href="change-password.php"> <i class="fas fa-key"></i>
                             <p>Change Password</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="index.html"> <i class="fa-solid fa-right-from-bracket"></i>
+                        <a href="index.php"> <i class="fa-solid fa-right-from-bracket"></i>
                             <p>Signout</p>
                         </a>
                     </li>
@@ -56,17 +62,25 @@
         </div>
         <section class="main">
             <div class="main-title">
-                <h1> <span>Anuj </span>'s Profile</h1>
+                <h1> <span>
+                        <?php
+                        echo $_SESSION['firstName'];
+                        ?>
+                    </span>'s Profile</h1>
             </div>
             <div class="main-container">
-                <div class="main-container-link"> <a href="edit-profile.html">edit</a></div>
+                <div class="main-container-link"> <a href="edit-profile.php">edit</a></div>
                 <div class="main-container-table">
                     <div class="main-container-table-box">
                         <div class="main-container-table-box-label">
                             <p>First Name</p>
                         </div>
                         <div class="main-container-table-box-value">
-                            <p>Anuj</p>
+                            <p>
+                                <?php
+                                echo $_SESSION['firstName'];
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="main-container-table-box">
@@ -74,7 +88,11 @@
                             <p>Last Name</p>
                         </div>
                         <div class="main-container-table-box-value">
-                            <p>Kumar</p>
+                            <p>
+                                <?php
+                                echo $_SESSION['lastName'];
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="main-container-table-box">
@@ -82,7 +100,11 @@
                             <p>Contact No.</p>
                         </div>
                         <div class="main-container-table-box-value">
-                            <p>1234567890</p>
+                            <p>
+                                <?php
+                                echo $_SESSION['contact_no'];
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="main-container-table-box">
@@ -90,7 +112,11 @@
                             <p>Email</p>
                         </div>
                         <div class="main-container-table-box-value">
-                            <p>phpgurukulteam@gmail.com</p>
+                            <p>
+                                <?php
+                                echo $_SESSION['email'];
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="main-container-table-box">
@@ -98,7 +124,11 @@
                             <p>Reg. Date </p>
                         </div>
                         <div class="main-container-table-box-value">
-                            <p>2021-08-10 00:00:00</p>
+                            <p>
+                                <?php
+                                echo $_SESSION['regDate'];
+                                ?>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +138,7 @@
             </footer>
         </section>
     </main>
-    <div class="profile-box"> <a href="change-password.html">Settings</a><a href="change-password.html">Activity Log </a><a href="index.html">Logout</a></div>
+    <div class="profile-box"> <a href="change-password.php">Settings</a><a href="change-password.php">Activity Log </a><a href="index.php" onclick="<?php session_destroy(); ?>">Logout</a></div>
 </body>
 
 </html>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['firstName'])) {
+    echo "<script type=text/javascript>document.location = 'index.php'</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +21,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h1> <a href="welcome.html">User Panel </a></h1>
+            <h1> <a href="welcome.php">User Panel </a></h1>
         </div>
         <div class="nav-button" id="navButton">
             <button> <i class="fas fa-bars"></i></button>
@@ -32,22 +38,22 @@
             <div class="sidebar-link">
                 <ul class="sidebar-link-list">
                     <li class="sidebar-link-list-item">
-                        <a href="welcome.html"> <i class="fa-solid fa-gauge-high"></i>
+                        <a href="welcome.php"> <i class="fa-solid fa-gauge-high"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="profile.html"> <i class="fas fa-user"></i>
+                        <a href="profile.php"> <i class="fas fa-user"></i>
                             <p>Profile</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="change-password.html"> <i class="fas fa-key"></i>
+                        <a href="change-password.php"> <i class="fas fa-key"></i>
                             <p>Change Password</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="index.html"> <i class="fa-solid fa-right-from-bracket"></i>
+                        <a href="index.php" onclick="<?php session_destroy(); ?>"> <i class="fa-solid fa-right-from-bracket"></i>
                             <p>Signout</p>
                         </a>
                     </li>
@@ -65,9 +71,14 @@
                 <div class="main-navigation-box">
                     <div class="main-navigation-box-text">
                         <p>
-                            Welcome Back <span>AnujKumar</span></p>
+                            Welcome Back <span>
+                                <?php
+                                echo $_SESSION['firstName'];
+                                echo $_SESSION['lastName'];
+                                ?>
+                            </span></p>
                     </div>
-                    <div class="main-navigation-box-link"> <a href="profile.html">View Profile<i class="fa-solid fa-angle-right"></i></a></div>
+                    <div class="main-navigation-box-link"> <a href="profile.php">View Profile<i class="fa-solid fa-angle-right"></i></a></div>
                 </div>
             </div>
             <footer>
@@ -75,7 +86,7 @@
             </footer>
         </section>
     </main>
-    <div class="profile-box"> <a href="change-password.html">Settings</a><a href="change-password.html">Activity Log </a><a href="index.html">Logout</a></div>
+    <div class="profile-box"> <a href="change-password.php">Settings</a><a href="change-password.php">Activity Log </a><a href="index.php" onclick="<?php session_destroy(); ?>">Logout</a></div>
 </body>
 
 </html>

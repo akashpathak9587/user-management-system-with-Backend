@@ -1,3 +1,44 @@
+<?php
+include_once 'config.php';
+session_start();
+if (!isset($_SESSION['firstName'])) {
+    echo "<script type='text/javascript'>document.location = 'index.php'</script>";
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $currPass = $_POST['currPass'];
+    $newPass = $_POST['newPass'];
+    $confPass = $_POST['confPass'];
+    session_start();
+    $email = $_SESSION['email'];
+    $sql = "select * from users where email='$email'";
+    $result = mysqli_query($conn, $sql);
+    $resultArray = mysqli_fetch_assoc($result);
+    $num = mysqli_num_rows($result);
+    if ($num == 0) {
+        echo "<script>alert('error');</script>";
+    }
+    if ($num > 0) {
+        $hash = $resultArray['password'];
+        if (!password_verify($currPass, $hash)) {
+            echo "<script>alert('old password is wrong.');s</script>";
+        } else {
+            if ($newPass != $confPass) {
+                echo "<script>alert('password does not match');</script>";
+            } else {
+                $passwordHash = password_hash($newPass, PASSWORD_DEFAULT);
+                $sql = "update users set password='$passwordHash' where email='$email'";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                    echo "<script>alert('password updated successfully');</script>";
+                    echo "<script type='text/javascript'>document.location = 'welcome.php'</script>";
+                }
+            }
+        }
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +56,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h1> <a href="welcome.html">User Panel </a></h1>
+            <h1> <a href="welcome.php">User Panel </a></h1>
         </div>
         <div class="nav-button" id="navButton">
             <button> <i class="fas fa-bars"></i></button>
@@ -32,22 +73,22 @@
             <div class="sidebar-link">
                 <ul class="sidebar-link-list">
                     <li class="sidebar-link-list-item">
-                        <a href="welcome.html"> <i class="fa-solid fa-gauge-high"></i>
+                        <a href="welcome.php"> <i class="fa-solid fa-gauge-high"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="profile.html"> <i class="fas fa-user"></i>
+                        <a href="profile.php"> <i class="fas fa-user"></i>
                             <p>Profile</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="change-password.html"> <i class="fas fa-key"></i>
+                        <a href="change-password.php"> <i class="fas fa-key"></i>
                             <p>Change Password</p>
                         </a>
                     </li>
                     <li class="sidebar-link-list-item">
-                        <a href="index.html"> <i class="fa-solid fa-right-from-bracket"></i>
+                        <a href="index.php" onclick="<?php session_destroy(); ?>"> <i class="fa-solid fa-right-from-bracket"></i>
                             <p>Signout</p>
                         </a>
                     </li>
@@ -60,7 +101,7 @@
             </div>
             <div class="main-container">
                 <div class="main-container-form">
-                    <form action="#" method="get">
+                    <form action="change-password.php" method="post">
                         <div class="main-container-form-current">
                             <div class="main-container-form-current-label">
                                 <label for="currentPass">Current Password</label>
@@ -96,7 +137,7 @@
             </footer>
         </section>
     </main>
-    <div class="profile-box"> <a href="change-password.html">Settings</a><a href="change-password.html">Activity Log </a><a href="index.html">Logout</a></div>
+    <div class="profile-box"> <a href="change-password.php">Settings</a><a href="change-password.php">Activity Log </a><a href="index.php" onclick="<?php session_destroy(); ?>">Logout</a></div>
 </body>
 
 </html>
